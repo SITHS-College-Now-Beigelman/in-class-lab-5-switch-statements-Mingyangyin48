@@ -10,7 +10,8 @@ using namespace std;
 
 int main()
 {
-    int robotMoves = 0;
+    // setting variables
+    int i = 0; // robotMoves
     int north = 0;
     int east = 0;
     int south = 0;
@@ -19,7 +20,7 @@ int main()
     srand(time(0));
         //part 1
 
-    for (robotMoves;robotMoves<25;robotMoves++)
+    for (i;i=25;i++)
     {
         int direct;
         direct = rand() % 4 + 1; //random number between 1 and 4 so each is 25% //probable
@@ -28,24 +29,24 @@ int main()
         switch (direct)
         {
             case 1:
-                north += 1;
+                north += 1; // adds one to the total going into the north direction
                 break;
             case 2:
-                south += 1;
+                south += 1; // adds one to the total going into the south direction
                 break;
             case 3:
-                east += 1;
+                east += 1; // adds one to the total going into the east direction
                 break;
             case 4:
-                west += 1;
+                west += 1; // adds one to the total going into the west direction
                 break;
         }
     }
-    cout << "The robot is " << north << " blocks north, " << east << " blocks east, " << south << " blocks south, and " << west << " blocks west from the start.";
+    cout << "The robot is " << north << " blocks north, " << east << " blocks east, " << south << " blocks south, and " << west << " blocks west from the start."; 
+    // telling the user how far the robot has moved in each direction
 
     return 0;
 }
-
 
 /*
 
